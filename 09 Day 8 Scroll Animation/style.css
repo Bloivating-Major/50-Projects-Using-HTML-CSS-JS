@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #13073A;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+  overflow-x: hidden;
+}
+
+h1 {
+    margin: 20px;
+    color: #E437FF;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(228, 55, 255, 0.5);
+}
+
+.box {
+    background: rgba(31, 8, 71, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.3),
+                inset 0 0 20px rgba(157, 78, 221, 0.2);
+    transform: translateX(400%);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(157, 78, 221, 0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+    padding: 20px;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #E437FF, #9D4EDD);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.box:hover {
+    transform: translateX(0) scale(1.02);
+    box-shadow: 0 0 30px rgba(157, 78, 221, 0.4),
+                inset 0 0 30px rgba(157, 78, 221, 0.3);
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+    background: rgba(41, 11, 91, 0.7);
+}
+
+.box.show {
+    transform: translateX(0);
+}
+
+.box h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(228, 55, 255, 0.5);
+}
+
+/* Add these new styles for crystal cards */
+.box::after {
+    content: "Crystal Card";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    color: #E437FF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.crystal-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px rgba(228, 55, 255, 0.5));
+}
+
+.box p {
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.card-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    color: rgba(228, 55, 255, 0.7);
+    font-weight: 600;
+}
+
+.description {
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: auto;
+}
+
+.collection {
+    color: #9D4EDD;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.price {
+    color: #E437FF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Note: You'll need to replace the image sources with actual crystal images */
+.crystal-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: 30px 0;
+    filter: drop-shadow(0 0 15px rgba(228, 55, 255, 0.5));
+}
