@@ -32,17 +32,6 @@ The animation leverages JavaScript and CSS transitions for a dynamic reveal of t
    - The `checkBoxes()` function determines the position of each card relative to the viewport and adds the `.show` class when the card enters the visible area.
    - The `window.addEventListener('scroll', checkBoxes)` continuously monitors the scroll position.
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/project-8-crystal-cards.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd project-8-crystal-cards
-   ```
-3. Open the `index.html` file in your preferred browser to view the project.
-
 ## Usage
 - Scroll down the page to observe the smooth reveal animations.
 - Hover over any card to highlight it and view additional details.
@@ -55,15 +44,9 @@ project-8-crystal-cards/
 |-- script.js    # JavaScript for scroll animations
 ```
 
-## Demo
-- Add a link to your live demo or a GIF/video showing the project in action.
-
 ## Customization
 - Replace the placeholder crystal images (`src=""`) in the `.crystal-img` tags with your desired images.
 - Update text content in `.description`, `.collection`, and `.price` to match your use case.
-
-## Screenshots
-- Include screenshots or mockups of your project to showcase its design.
 
 ## Acknowledgments
 - Font Awesome for icons.

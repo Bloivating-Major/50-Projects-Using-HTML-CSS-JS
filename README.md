@@ -15,6 +15,7 @@ Welcome to the **50 Days, 50 Projects** series! Each day features a new project 
 | 6       | Hidden Search     | Toggle Control with JavaScript.            | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/07%20Day%206%20Hidden%20Search/index.html)          | [Source Code](./07%20Day%206%20Hidden%20Search/Readme.md)                                             |
 | 7       | Website Reveal Animation using GSAP     | Website Loader           | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/08%20Day%207%20Website%20Reveal%20Animation/index.html)          | [Source Code](./08%20Day%207%20Website%20Reveal%20Animation/Readme.md)                                             |
 | 8       | Website Scroll Animation    | Scroll Animation           | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/09%20Day%208%20Scroll%20Animation/index.html)          | [Source Code](./09%20Day%208%20Scroll%20Animation/readme.md)                                             |
+| 9       | Split Landing Page   |  Hover Translation Effect           | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/09%20Day%208%20Scroll%20Animation/index.html)          | [Source Code](./10%20Day%209%20Split%20Landing%20Page/readme.md)                                             |
 
 
 ---
