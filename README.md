@@ -17,7 +17,8 @@ Welcome to the **50 Days, 50 Projects** series! Each day features a new project 
 | 8       | Website Scroll Animation    | Scroll Animation           | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/09%20Day%208%20Scroll%20Animation/index.html)          | [Source Code](./09%20Day%208%20Scroll%20Animation/readme.md)                                             |
 | 9       | Split Landing Page   |  Hover Translation Effect           | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/10%20Day%209%20Split%20Landing%20Page/index.html)          | [Source Code](./10%20Day%209%20Split%20Landing%20Page/readme.md)                                             |
 | 10       | Movie Guide App   |  Movie Api         | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/11%20Day%2010%20Movie%20Guide%20App/index.html)          | [Source Code](./11%20Day%2010%20Movie%20Guide%20App/Readme.md)                                             |
-| 11       | Gradient Generator   |  Conversion Of JS Code        | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/11%20Day%2010%20Movie%20Guide%20App/index.html)          | [Source Code](./12%20Day%2011%20Gradient%20Generator/Readme.md)                                             |
+| 11       | Gradient Generator   |  Conversion Of JS Code        | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/12%20Day%2011%20Gradient%20Generator/index.html)          | [Source Code](./12%20Day%2011%20Gradient%20Generator/Readme.md)                                             |
+| 12       | XO Game   |  Advance Logic       | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/13%20Day%2012%20Simple%20XO%20Game/index.html)          | [Source Code](./13%20Day%2012%20Simple%20XO%20Game/Readme.md)                                             |
 
 
 ---

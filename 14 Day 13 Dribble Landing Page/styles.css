@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    height: 3.5em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.go-pro {
+    background: #000000;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #0d0c22;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: #6e6d7a;
+    margin-bottom: 2rem;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #b4b4b6;
+    border-radius: 8px;
+    border: 1px solid #e7e7e9;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    background: #f3f3f6;
+}
+
+.search-container select {
+    padding: 1rem;
+    border: none;
+    background: #f3f3f6;
+    outline: none;
+}
+
+.search-btn {
+    background: #ea4c89;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Trending */
+.trending {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tags a {
+    text-decoration: none;
+    color: #6e6d7a;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 8px;
+    margin: 0 0.25rem;
+}
+
+/* Filters Section */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+}
+
+.filter-categories {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.filter-categories a {
+    text-decoration: none;
+    color: #6e6d7a;
+}
+
+.filter-categories a.active {
+    color: #0d0c22;
+    font-weight: 500;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-info {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media Queries for Tablet */
+@media screen and (max-width: 1024px) {
+    /* Navigation */
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .logo{
+        height: 3.6em;
+    }
+
+    /* Hero Section */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Gallery */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links on mobile */
+    }
+
+    .nav-left {
+        gap: 1rem;
+    }
+
+    .logo {
+       display: none;
+
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Search Container */
+    .search-container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .search-container input,
+    .search-container select {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .search-container select {
+        border-top: 1px solid #e7e7e9;
+    }
+
+    .search-btn {
+        width: 100%;
+        border-radius: 0 0 8px 8px;
+        padding: 0.75rem;
+    }
+
+    /* Trending */
+    .trending {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .tags a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Filters Section */
+    .filters {
+        padding: 1rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-categories {
+        gap: 1rem;
+    }
+
+    .filter-categories a {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    /* Gallery */
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .gallery-info {
+        padding: 0.75rem;
+    }
+}
+
+/* Additional improvements for larger phones */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For very small devices */
+@media screen and (max-width: 320px) {
+    .nav-right {
+        gap: 0.5rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Add these to your existing CSS */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo{
+        height: 3.6em;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+} 

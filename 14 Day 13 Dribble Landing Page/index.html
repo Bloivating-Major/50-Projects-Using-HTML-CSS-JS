@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribbble - Discover the World's Top Designers</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-left">
+            <img src="./assets/Dribbble New 2023.svg" alt="Dribbble" class="logo">
+            <ul class="nav-links">
+        
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Hire a Designer</a></li>
+                <li><a href="#">Find Jobs</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <button class="sign-in">Sign in</button>
+            <button class="go-pro">Go Pro</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Discover the world's<br>top designers</h1>
+        <p>Explore work from the most talented and accomplished designers<br>ready to take on your next project</p>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="What are you looking for?">
+            <select>
+                <option>Shots</option>
+                <option>Designers</option>
+            </select>
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Trending Searches -->
+        <div class="trending">
+            <span>Trending searches:</span>
+            <div class="tags">
+                <a href="#">landing page</a>
+                <a href="#">e-commerce</a>
+                <a href="#">mobile app</a>
+                <a href="#">logo design</a>
+                <a href="#">dashboard</a>
+                <a href="#">icons</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filters">
+        <div class="filter-left">
+            <button class="following">Following</button>
+        </div>
+        <div class="filter-categories">
+            <a href="#" class="active">Discover</a>
+            <a href="#">Animation</a>
+            <a href="#">Branding</a>
+            <a href="#">Illustration</a>
+            <a href="#">Mobile</a>
+            <a href="#">Print</a>
+            <a href="#">Product Design</a>
+            <a href="#">Typography</a>
+            <a href="#">Web Design</a>
+        </div>
+        <div class="filter-right">
+            <button class="filters-btn">
+                <i class="fas fa-sliders-h"></i> Filters
+            </button>
+        </div>
+    </section>
+
+    <!-- Grid Gallery -->
+    <section class="gallery">
+        <!-- Gallery items will be added dynamically with JavaScript -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
