@@ -96,10 +96,10 @@ Dribbble Clone/
 ## 📸 Screenshots  
 
 ### Desktop View  
-![Desktop View](./assets/desktop-view.png)  
+![Desktop View](./assets/Desktop.png)  
 
 ### Mobile View  
-![Mobile View](./assets/mobile-view.png)  
+![Mobile View](./assets/Mobile.png)  
 
 ---  
 
