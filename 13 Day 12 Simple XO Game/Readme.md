@@ -1,7 +1,7 @@
 
 ---
 
-# 🎮 Day #6 - Simple XO Game | AsmrProg 🎮
+# 🎮 Day #12 - Simple XO Game  🎮
 
 Welcome to **Simple XO Game**! This project is a classic Tic-Tac-Toe game built with HTML, CSS, and JavaScript. Test your strategy and play against a friend in this fun and interactive game! 🕹️
 

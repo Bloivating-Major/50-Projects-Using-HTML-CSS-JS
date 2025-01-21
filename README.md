@@ -19,6 +19,7 @@ Welcome to the **50 Days, 50 Projects** series! Each day features a new project 
 | 10       | Movie Guide App   |  Movie Api         | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/11%20Day%2010%20Movie%20Guide%20App/index.html)          | [Source Code](./11%20Day%2010%20Movie%20Guide%20App/Readme.md)                                             |
 | 11       | Gradient Generator   |  Conversion Of JS Code        | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/12%20Day%2011%20Gradient%20Generator/index.html)          | [Source Code](./12%20Day%2011%20Gradient%20Generator/Readme.md)                                             |
 | 12       | XO Game   |  Advance Logic       | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/13%20Day%2012%20Simple%20XO%20Game/index.html)          | [Source Code](./13%20Day%2012%20Simple%20XO%20Game/Readme.md)                                             |
+| 13       | Dribble Landing Page   |  UI Focused      | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/14%20Day%2013%20Dribble%20Landing%20Page/index.html)          | [Source Code](./14%20Day%2013%20Dribble%20Landing%20Page/Readme.md)                                             |
 
 
 ---

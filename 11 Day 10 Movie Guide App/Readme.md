@@ -1,4 +1,4 @@
-# Movie Guide App 🎥
+# Day 10 : Movie Guide App 🎥
 
 A sleek and responsive web application to search for movie details using the **OMDb API**. Simply enter a movie name, and the app will fetch detailed information such as ratings, cast, plot, runtime, and more! 🌟
 

@@ -1,4 +1,4 @@
-# Split Landing Page
+# Day 9  Split Landing Page
 
 A visually appealing split landing page with a hover effect to emphasize either side of the screen. This project features two sections for PlayStation 5 and Xbox Series X, complete with CSS animations and responsive design.
 
