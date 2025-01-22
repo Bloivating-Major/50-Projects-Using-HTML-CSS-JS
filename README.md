@@ -21,7 +21,7 @@ Welcome to the **50 Days, 50 Projects** series! Each day features a new project 
 | 12       | XO Game   |  Advance Logic       | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/13%20Day%2012%20Simple%20XO%20Game/index.html)          | [Source Code](./13%20Day%2012%20Simple%20XO%20Game/Readme.md)                                             |
 | 13       | Dribble Landing Page   |  UI Focused      | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/14%20Day%2013%20Dribble%20Landing%20Page/index.html)          | [Source Code](./14%20Day%2013%20Dribble%20Landing%20Page/Readme.md)                                             |
 | 14       | Incrementing Counter  |  Counter Functionality      | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/15%20Day%2014%20Incrementing%20Counter/index.html)          | [Source Code](./15%20Day%2014%20Incrementing%20Counter/Readme.md)                                             |
-| 14       | Live Filter  |  Api Filter      | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/16%20Day%2015%20Live%20Filter/index.html)          | [Source Code](./16%20Day%2015%20Live%20Filter//Readme.md)                                             |
+| 15       | Live Filter  |  Api Filter      | [Live Demo](https://bloivating-major.github.io/50-Projects-Using-HTML-CSS-JS/16%20Day%2015%20Live%20Filter/index.html)          | [Source Code](./16%20Day%2015%20Live%20Filter//Readme.md)                                             |
 
 
 ---
