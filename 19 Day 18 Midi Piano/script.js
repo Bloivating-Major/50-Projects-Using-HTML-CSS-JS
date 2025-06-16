@@ -33,3 +33,18 @@ document.addEventListener('keyup', (e)=>{
   noteDetials.active = false; 
   playNote();
 })
+
+function getNoteDetail(keyboardKey){
+  return NOTE_DETAILS.find(n =>  `Key${n.key}` === keyboardKey);
+}
+
+function playNote(){
+  NOTE_DETAILS.forEach((n)=>{
+    const keyElement = document.querySelector(`[data-note=${n.note}]`);
+    keyElement.classList.toggle('active', n.active)
+    if(n.oscillator != null){
+      n.oscillator.stop();
+      n.oscillator.disconnect();
+    }
+  });
+}
