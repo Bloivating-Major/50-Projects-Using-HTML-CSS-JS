@@ -34,3 +34,10 @@
         const TODOS_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-todos`
         ```
         - also to save our key's as in array format we cannot save it directly we first will have to convert our array into a string and then only we can save it!
+
+    - Load Todos
+        - we will create a function to load todos.
+        - first we will get out todos using the storage key that we have used (todoString)
+        - then we will return it using JSON.parse() which will eventually convert it into an array and when we won't have any todos then it will give us an error so what we will do is use short curcit to make this work
+        - also now what we can do is instead of saving todos in an array we can call loadTodos function over it
+        - and what we can do is loop over todos using forEach to render the loaded todos
