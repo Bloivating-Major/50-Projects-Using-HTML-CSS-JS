@@ -23,3 +23,14 @@
     - We will be cloning the template using content.cloneNode(true)
     - So when we write a block of code or feature we should always check for edge cases. 
     - in our case it is adding blanktodos.
+
+    - Save Todos
+        - First we will create a global array to store our todos in the array and then we can store them in localstorage through a function.
+        - So first we will push our todo item in todos array then we will call save todos.
+        - saveTodos will set localStorage as it needs a key value pair what we can do is create a key which will help us keep our data in a systematic format
+        - so we will create a key prefix that will be related to our application
+        ```js
+        const LOCAL_STORAGE_PREFIX = "ADVANCED_TODO_LIST"
+        const TODOS_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-todos`
+        ```
+        - also to save our key's as in array format we cannot save it directly we first will have to convert our array into a string and then only we can save it!
