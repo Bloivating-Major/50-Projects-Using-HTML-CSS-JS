@@ -7,20 +7,42 @@ const TODOS_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-todos`;
 const todos = loadTodo();
 todos.forEach(renderTodo);
 
+list.addEventListener('change', e =>{
+    if(!e.target.matches("[data-list-item-checkbox]")) return;
+    const parent = e.target.closest(".list-item");
+    const todoId = parent.dataset.todoId;
+    const todo = todos.find(t => t.id === todoId);
+    todo.completed = e.target.checked;
+    saveTodo();
+})
+
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
     const todoText = todoInput.value;
     if(todoText.trim() === "") return;
-    todos.push(todoText);
-    renderTodo(todoText);
+    const newTodo = {
+        name : todoText,
+        completed : false,
+        id: new Date().valueOf().toString(),
+    }
+    todos.push(newTodo);
+    renderTodo(newTodo);
     saveTodo();
     todoInput.value = "";
 })
 
-function renderTodo(todoText){
+function renderTodo(todo){
     const templateClone = template.content.cloneNode(true);
-    const listItem = templateClone.querySelector('[data-list-item-text]')
-    listItem.textContent = todoText.trim();
+
+    const listItem = templateClone.querySelector('.list-item');
+    listItem.dataset.todoId = todo.id;
+
+    const textElement = templateClone.querySelector('[data-list-item-text]')
+    textElement.textContent = todo.name.trim();
+    
+    const checkBox = templateClone.querySelector('[data-list-item-checkbox]');
+    checkBox.checked = todo.completed;
+
     list.appendChild(templateClone);
 }
 
