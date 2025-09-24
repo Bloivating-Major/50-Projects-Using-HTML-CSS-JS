@@ -4,7 +4,7 @@ const list = document.querySelector("#list");
 const template = document.querySelector('#list-item-template')
 const LOCAL_STORAGE_PREFIX = "ADVANCE_TODO_LIST";
 const TODOS_STORAGE_KEY = `${LOCAL_STORAGE_PREFIX}-todos`;
-const todos = loadTodo();
+let todos = loadTodo();
 todos.forEach(renderTodo);
 
 list.addEventListener('change', e =>{
@@ -13,6 +13,15 @@ list.addEventListener('change', e =>{
     const todoId = parent.dataset.todoId;
     const todo = todos.find(t => t.id === todoId);
     todo.completed = e.target.checked;
+    saveTodo();
+})
+
+list.addEventListener('click', e=>{
+    if(!e.target.matches("[data-button-delete]")) return;
+    const parent = e.target.closest(".list-item");
+    const todoId = parent.dataset.todoId;
+    parent.remove();
+    todos = todos.filter(t => t.id !== todoId);
     saveTodo();
 })
 
