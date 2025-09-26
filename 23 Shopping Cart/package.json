@@ -1,0 +1,16 @@
+{
+  "name": "23-shopping-cart",
+  "version": "1.0.0",
+  "description": "E-Commerce Shopping Cart Feature",
+  "scripts": {
+    "start": "parcel index.html team.html store.html",
+    "build": "parcel build index.html team.html store.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
