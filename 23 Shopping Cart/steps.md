@@ -82,3 +82,16 @@
 - and in our fun addToCart we will push the id and quantity to shoppingCart in an object format
 
 - Now in order to call addToCart(id) function what we will do is place some sort of global event listener over the addToCart Button we will add an data attribute data-add-to-cart-button and we will perform the operations on =1> setupStore fun <1=
+
+- ok now how do you exactly render the item?
+    - for that you have to know what does the cart item look like?
+    - and then we will create a template out of it giving it an id of cart-item
+    - now to select those values in the future we are step by step giving them ids so that we can use them in future.
+    - data-item for main template
+    - data-image for image 
+    - data-name
+    - data-quantity
+    - data-price
+    - remove the placeholders 
+    - So now that we have setup the template what we can do is more forward with rendering process
+    - now we will create our template clone and then select all those elements in our template item and then use it
