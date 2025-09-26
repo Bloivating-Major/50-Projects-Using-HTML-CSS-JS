@@ -26,8 +26,5 @@ function renderStore(item){
     const img = storeItem.querySelector("[data-image]");
     img.src = `${IMAGE_URL}/${item.imageColor}/${item.imageColor}`
 
-    const button = storeItem.querySelector("[data-button]");
-    button.innerText = "Add To Cart"
-
     storeItemContainer.appendChild(storeItem);
 }

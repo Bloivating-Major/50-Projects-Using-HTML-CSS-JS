@@ -24,8 +24,8 @@
       </div>
     </div>
   </section>
-  <section class="invisible">
-    <div class="mb-4 top-0 right-0 mr-4 mt-20 fixed">
+  <section>
+    <div data-cart-items-wrapper class="mb-4 top-0 right-0 mr-4 mt-20 fixed">
       <div style="max-height: calc(100vh - 6rem);" class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col">
         <div class="overflow-y-auto px-4 pt-4">
           <div class="mb-6">
@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-    <button class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700">
+    <button data-cart-button class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
@@ -83,7 +83,7 @@
               <h2 data-name class="text-gray-900 title-font text-lg font-medium"></h2>
               <p data-price class="mt-1"></p>
             </div>
-            <button data-button class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"></button>
+            <button data-add-to-cart-button class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700">Add To Cart</button>
           </div>
         </div>
   </template>
