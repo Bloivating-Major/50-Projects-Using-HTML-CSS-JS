@@ -1,4 +1,3 @@
-
 - Setup Parcel
 
 - Requirements
@@ -40,6 +39,46 @@
     - set the item.id to container.dataset.id
     - set up the name and add values inside name.
 
+=1> setupStore fun <1= so in the function setupStore
+- what we can do is add EV on document itself to see if any e matches our [data-add-to-cart-button] if yes then we will call addToCart() function over here with id.
+- and in order to get id we will check our data-store-item attribute of the closest because we are setting the id so it will give us the id of that item.
+
 # Script.js
 
 - here we will import our setupStore() fun and use it.
+- here we will import our setupShoppingCart() fun and use it.
+
+
+- Now we will create our shoppingCart Feature
+- so create a shoppingCart.js file then export the setupShoppingCart fun 
+- call it in script.js
+
+# Shopping Cart.js
+
+- What features we can build?
+
+1. add items to cart
+2. remove items from cart
+3. show/hide the cart when clicked
+4. show/hide the cart button when it has no items or when it goes from 0 to 1 items
+5. persist across multiple pages
+6. calculate an accuratetotal
+7. handle multiple of the same item in the cart
+
+3. show/hide the cart when clicked
+- Ok so now what we have to do is to perform any kind of action we need to click on the button so first we will select the button on the cart item!
+    - to select the button we will use a data attribute data-cart-button 
+- now you have to test on which section you will be applying the invisible class.
+- and we can add a data-cart-items-wrapper on it.
+- now we will select cartButton and cartItemsWrapper using those data atttributes
+- and on cart button we can add an EL and toggle invisible class on the cartItemsWrapper
+
+1. add items to cart
+    - Handle Click event for adding
+    - handle multiple of the same item in the cart
+    - calculate an accurate total
+- So now we will create addToCart(id){} fun and export it
+- Now where do you store those ids we will store them into a shopping cart array at global level
+- and in our fun addToCart we will push the id and quantity to shoppingCart in an object format
+
+- Now in order to call addToCart(id) function what we will do is place some sort of global event listener over the addToCart Button we will add an data attribute data-add-to-cart-button and we will perform the operations on =1> setupStore fun <1=
