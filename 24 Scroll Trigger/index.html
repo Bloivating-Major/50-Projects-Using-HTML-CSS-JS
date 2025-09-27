@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,150 +40,181 @@
         }
 
         /* Utility Classes */
-        .font-hero {
-            font-family: var(--font-hero);
-        }
+        .font-hero { font-family: var(--font-hero); }
+        .font-subheading { font-family: var(--font-subheading); }
+        .font-base { font-family: var(--font-base); }
+        .font-body { font-family: var(--font-body); }
 
-        .font-subheading {
-            font-family: var(--font-subheading);
+        /* Responsive text utilities */
+        .text-hero {
+            font-size: clamp(3rem, 8vw, 8rem);
+            line-height: 0.9;
+            letter-spacing: -0.05em;
         }
-
-        .font-base {
-            font-family: var(--font-base);
-        }
-
-        .font-body {
-            font-family: var(--font-body);
+        
+        .text-narrative {
+            font-size: clamp(2rem, 6vw, 5rem);
+            line-height: 0.9;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-</head>
 
-<body class="box-border bg-[#12100E] h-screen w-full">
+<body class="box-border bg-[#12100E] min-h-screen w-full">
     <main>
-        <header
-            class="h-screen py-10 px-15 bg-[url(./assets/cylinder.png)] bg-no-repeat bg-size-[80vh] bg-position-[left_120%_top_50%] grid grid-cols-[auto_auto_auto_1fr_1fr] grid-rows-[auto_1fr_auto]">
-            <nav class="col-span-12 flex justify-between items-center mb-8 lg:mb-16">
-                <div class="flex space-x-8 text-sm font-medium">
+        <!-- RESPONSIVE HEADER -->
+        <header class="min-h-screen py-6 px-4 md:py-10 md:px-8 lg:px-16 
+                       bg-[url(./assets/cylinder.png)] bg-no-repeat 
+                       bg-[length:60vh] md:bg-[length:70vh] lg:bg-[length:80vh]
+                       bg-[position:right_100%_center] md:bg-[position:right_110%_center] lg:bg-[position:left_120%_top_50%]
+                       grid grid-cols-1 lg:grid-cols-[auto_auto_auto_1fr_1fr] 
+                       grid-rows-[auto_1fr_auto] gap-6 lg:gap-0">
+            
+            <!-- RESPONSIVE NAVIGATION -->
+            <nav class="lg:col-span-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 lg:mb-16">
+                <div class="flex flex-wrap gap-4 md:space-x-8 text-xs md:text-sm font-medium">
                     <span class="text-white">STICKY SECTIONS</span>
                     <span class="text-zinc-400 hover:text-white transition-colors">ARTICLE</span>
                     <span class="text-zinc-400 hover:text-white transition-colors">ALL DEMOS</span>
-                    <span class="text-zinc-400 hover:text-white transition-colors">SUBSCRIBE TO OUR FRONTEND NEWS</span>
+                    <span class="hidden md:inline text-zinc-400 hover:text-white transition-colors">SUBSCRIBE TO OUR FRONTEND NEWS</span>
                 </div>
-                <div class="text-xs text-zinc-400 text-right leading-tight">
+                <div class="text-xs text-zinc-400 text-left md:text-right leading-tight">
                     DIV/I.AI: ON DEMAND CONTENT CREATION,<br>
                     CODE WRITING & IMAGE GENERATION.
                 </div>
             </nav>
 
-            <div class="col-span-12 lg:col-span-8 flex flex-col justify-center items-end w-fit relative text-white">
-                <h1 class="text-8xl font-regular">
+            <!-- RESPONSIVE HERO SECTION -->
+            <div class="lg:col-span-8 flex flex-col justify-center items-start lg:items-end w-full lg:w-fit relative text-white">
+                <h1 class="text-hero font-base leading-none mb-2">
                     THE<span class="text-white font-hero tracking-[-0.10em]">NARRATIVE</span>
                 </h1>
-                <p class="font-xs tracking-tighter">
+                <p class="text-sm md:text-base lg:text-lg tracking-tight opacity-80">
                     AN EXPLORATION OF THE SYNTHETIC ERA.
                 </p>
             </div>
 
-            <div
-                class="col-span-12 text-white flex items-center space-x-4 mt-8 lg:mt-0 border w-fit px-4 py-5 rounded-lg border-white">
+            <!-- RESPONSIVE VARIATIONS -->
+            <div class="lg:col-span-12 text-white flex flex-col md:flex-row items-start md:items-center gap-4 
+                        border w-full md:w-fit px-4 py-4 rounded-lg border-white/20">
                 <span class="text-sm font-medium">VARIATIONS:</span>
-                <div class="flex space-x-2 text-white">
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">1</button>
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">2</button>
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">3</button>
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">4</button>
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">5</button>
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">6</button>
+                <div class="flex flex-wrap gap-2 text-white">
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">1</button>
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">2</button>
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">3</button>
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">4</button>
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">5</button>
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">6</button>
                     <button class="w-8 h-8 rounded-full bg-white text-black text-sm font-medium">7</button>
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">8</button>
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">9</button>
-                    <button
-                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">10</button>
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">8</button>
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">9</button>
+                    <button class="w-8 h-8 rounded-full border border-zinc-600 text-sm hover:text-white text-zinc-600 transition-colors">10</button>
                 </div>
             </div>
         </header>
 
-        <section class="h-[90vh] w-full flex justify-center items-center text-white ">
-            <h1 class="text-5xl w-[70%] font-base leading-15 tracking-tighter">As data conglomerates reveled in the
-                opulence of cognitive wealth, a silent underclass manifested, condemned to the digital periphery.</h1>
-        </section>
-
-        <section class="flex flex-col gap-10 text-center text-white">
-            <div id="card1"
-                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#2e251e] mx-auto">
-                <img src="./assets/pentagon.png" alt="Pentagon" class="w-[165px]">
-                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
-                        class="text-5xl font-hero font-[900]">ALGORITHM</span></h1>
-                <p class="text-lg">The algorithm's working are shrouded in complexity.</p>
-            </div>
-
-            <div id="card2"
-                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#43392F] mx-auto">
-                <img src="./assets/cylinder.png" alt="Pentagon" class="w-[165px]">
-                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
-                        class="text-5xl font-hero font-[900]">DOGMA</span></h1>
-                <p class="text-lg">Enshrining the principles of conformity and reinforcing the status quo.</p>
-            </div>
-
-            <div id="card3"
-                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#2e251e] mx-auto">
-                <img src="./assets/radius.png" alt="Pentagon" class="w-[180px] aspect-square">
-                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
-                        class="text-5xl font-hero font-[900]">ARCHITECTS
-                    </span></h1>
-                <p class="text-lg">The elusive entities, lacking human form, operate in the shadows.</p>
-            </div>
-
-            <div id="card4"
-                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#43392F] mx-auto">
-                <img src="./assets/halfcircle.png" alt="Pentagon" class="w-[250px]">
-                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
-                        class="text-5xl font-hero font-[900]">WASTELAND</span></h1>
-                <p class="text-lg">This overlooked realm, a consequence of algorithmic judgments.</p>
-            </div>
-
-            <div id="card5"
-                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#2e251e] mx-auto">
-                <img src="./assets/hexagon.png" alt="Pentagon" class="w-[165px] ">
-                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
-                        class="text-5xl font-hero font-[900]">NARRATIVE</span></h1>
-                <p class="text-lg">The collective story sculpted by the architects.</p>
-            </div>
-
-            <div id="card6"
-                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#43392F] mx-auto">
-                <img src="./assets/plane.png" alt="Pentagon" class="w-[255px] ">
-                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
-                        class="text-5xl font-hero font-[900]">OPULENCE</span></h1>
-                <p class="text-lg">The cognitive elite's wealth in the algorithmic society.</p>
-            </div>
-
-        </section>
-
-        <section class="h-[90vh] w-full flex justify-center items-center text-white ">
-            <h1 class="text-5xl w-[70%] font-base leading-15 tracking-tighter">
-                Lost in perpetual dependency, inhabitants of the Synthetic Era found solace in cryptic simulations,
-                where pain ebbed and cognitive loads momentarily lightened.
+        <!-- RESPONSIVE QUOTE SECTION -->
+        <section class="min-h-[60vh] md:min-h-[80vh] lg:min-h-[90vh] w-full flex justify-center items-center text-white px-4 md:px-8">
+            <h1 class="text-2xl md:text-4xl lg:text-5xl w-full max-w-4xl font-base 
+                       leading-relaxed md:leading-tight lg:leading-tight tracking-tight text-center">
+                As data conglomerates reveled in the opulence of cognitive wealth, a silent underclass manifested, condemned to the digital periphery.
             </h1>
         </section>
 
+        <!-- RESPONSIVE CARDS SECTION -->
+        <section class="flex flex-col gap-12 md:gap-8 lg:gap-10 text-center text-white md:px-8">
+            <!-- Card 1 -->
+            <div id="card1" class="card sticky top-25 md:top-6 lg:top-15 flex flex-col 
+                                   w-[96%] max-sm:h-[80vh] md:max-w-md lg:max-w-lg xl:max-w-xl
+                                   px-6 py-8 md:px-8 md:py-12 lg:px-16 lg:py-20
+                                   rounded-xl gap-4 md:gap-5 items-center bg-[#2e251e] mx-auto flex flex-col justify-center items center">
+                <img src="./assets/pentagon.png" alt="Pentagon" class="w-56 md:w-32 lg:w-[165px]">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-subheading tracking-[-0.10em]">
+                    THE <br><span class="text-3xl md:text-4xl lg:text-5xl font-hero font-[900]">ALGORITHM</span>
+                </h1>
+                <p class="text-sm md:text-base lg:text-lg">The algorithm's workings are shrouded in complexity.</p>
+            </div>
 
+            <!-- Card 2 -->
+            <div id="card2" class="card sticky top-4 md:top-6 lg:top-15 flex flex-col 
+                                   w-[96%] max-sm:h-[80vh] md:max-w-md lg:max-w-lg xl:max-w-xl
+                                   px-6 py-8 md:px-8 md:py-12 lg:px-16 lg:py-20
+                                   rounded-xl gap-4 md:gap-5 items-center bg-[#43392F] mx-auto flex flex-col justify-center items center">
+                <img src="./assets/cylinder.png" alt="Cylinder" class="w-56 md:w-32 lg:w-[165px]">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-subheading tracking-[-0.10em]">
+                    THE <br><span class="text-3xl md:text-4xl lg:text-5xl font-hero font-[900]">DOGMA</span>
+                </h1>
+                <p class="text-sm md:text-base lg:text-lg">Enshrining the principles of conformity and reinforcing the status quo.</p>
+            </div>
 
+            <!-- Card 3 -->
+            <div id="card3" class="card sticky top-4 md:top-6 lg:top-15 flex flex-col 
+                                   w-[96%] max-sm:h-[80vh] md:max-w-md lg:max-w-lg xl:max-w-xl
+                                   px-6 py-8 md:px-8 md:py-12 lg:px-16 lg:py-20
+                                   rounded-xl gap-4 md:gap-5 items-center bg-[#2e251e] mx-auto flex flex-col justify-center items center">
+                <img src="./assets/radius.png" alt="Radius" class="w-56 md:w-36 lg:w-[180px] aspect-square">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-subheading tracking-[-0.10em]">
+                    THE <br><span class="text-3xl md:text-4xl lg:text-5xl font-hero font-[900]">ARCHITECTS</span>
+                </h1>
+                <p class="text-sm md:text-base lg:text-lg">The elusive entities, lacking human form, operate in the shadows.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div id="card4" class="card sticky top-4 md:top-6 lg:top-15 flex flex-col 
+                                   w-[96%] max-sm:h-[80vh] md:max-w-md lg:max-w-lg xl:max-w-xl
+                                   px-6 py-8 md:px-8 md:py-12 lg:px-16 lg:py-20
+                                   rounded-xl gap-4 md:gap-5 items-center bg-[#43392F] mx-auto flex flex-col justify-center items center">
+                <img src="./assets/halfcircle.png" alt="Half Circle" class="w-56 md:w-44 lg:w-[250px]">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-subheading tracking-[-0.10em]">
+                    THE <br><span class="text-3xl md:text-4xl lg:text-5xl font-hero font-[900]">WASTELAND</span>
+                </h1>
+                <p class="text-sm md:text-base lg:text-lg">This overlooked realm, a consequence of algorithmic judgments.</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div id="card5" class="card sticky top-4 md:top-6 lg:top-15 flex flex-col 
+                                   w-[96%] max-sm:h-[80vh] md:max-w-md lg:max-w-lg xl:max-w-xl
+                                   px-6 py-8 md:px-8 md:py-12 lg:px-16 lg:py-20
+                                   rounded-xl gap-4 md:gap-5 items-center bg-[#2e251e] mx-auto flex flex-col justify-center items center">
+                <img src="./assets/hexagon.png" alt="Hexagon" class="w-56 md:w-32 lg:w-[165px]">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-subheading tracking-[-0.10em]">
+                    THE <br><span class="text-3xl md:text-4xl lg:text-5xl font-hero font-[900]">NARRATIVE</span>
+                </h1>
+                <p class="text-sm md:text-base lg:text-lg">The collective story sculpted by the architects.</p>
+            </div>
+
+            <!-- Card 6 -->
+            <div id="card6" class="card sticky top-4 md:top-6 lg:top-15 flex flex-col 
+                                   w-[96%] max-sm:h-[80vh]  md:max-w-md lg:max-w-lg xl:max-w-xl
+                                   px-6 py-8 md:px-8 md:py-12 lg:px-16 lg:py-20
+                                   rounded-xl gap-4 md:gap-5 items-center bg-[#43392F] mx-auto flex flex-col justify-center items center">
+                <img src="./assets/plane.png" alt="Plane" class="w-56 md:w-44 lg:w-[255px]">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-subheading tracking-[-0.10em]">
+                    THE <br><span class="text-3xl md:text-4xl lg:text-5xl font-hero font-[900]">OPULENCE</span>
+                </h1>
+                <p class="text-sm md:text-base lg:text-lg">The cognitive elite's wealth in the algorithmic society.</p>
+            </div>
+        </section>
+
+        <!--QUOTE SECTION -->
+        <section class="min-h-[60vh] md:min-h-[80vh] lg:min-h-[90vh] w-full flex justify-center items-center text-white px-4 md:px-8">
+            <h1 class="text-2xl md:text-4xl lg:text-5xl w-full max-w-4xl font-base 
+                       leading-relaxed md:leading-tight lg:leading-tight tracking-tight text-center">
+                Lost in perpetual dependency, inhabitants of the Synthetic Era found solace in cryptic simulations, where pain ebbed and cognitive loads momentarily lightened.
+            </h1>
+        </section>
+
+        <!-- RESPONSIVE FOOTER -->
+        <footer class="h-screen max-sm:h-[50vh] py-4 flex flex-col justify-between text-center">
+            <div class="container mx-auto text-center flex justify-center items-center">
+                <img src="./assets/radius.png" class="w-[300px]" alt="">
+            </div>
+            <p class="text-xl text-white">Made by Sambhav!</p>
+        </footer>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>
 </body>
-
 </html>
