@@ -7,6 +7,7 @@ let shoppingCart = [];
 const cartItemTemplate = document.querySelector('#cart-item-template');
 const cartItemContainer = document.querySelector('[data-cart-items]');
 const cartQuantity = document.querySelector("[data-cart-quantity]");
+const cartTotal = document.querySelector('[data-cart-total]');
 const IMAGE_URL = "https://dummyimage.com/210x130";
 
 
@@ -27,10 +28,16 @@ export function addToCart(id){
 }
 
 function renderCart(){
-    cartItemContainer.innerHTML = "";
-
     cartQuantity.innerText = shoppingCart.length;
 
+    const total = shoppingCart.reduce((sum, entry)=>{
+        const item = items.find(i => entry.id === i.id);
+        return sum + item.priceCents * entry.quantity;       
+    }, 0);
+
+    cartTotal.innerHTML = formatCurrency(total);
+
+    cartItemContainer.innerHTML = "";
     shoppingCart.forEach((entry)=>{
         const item = items.find((i) => i.id === entry.id);
         const cartItem = cartItemTemplate.content.cloneNode(true);
