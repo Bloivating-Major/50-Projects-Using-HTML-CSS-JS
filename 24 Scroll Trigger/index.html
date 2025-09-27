@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm</title>
+    <style>
+        /* Font weight 800 (Bold) */
+        @font-face {
+            font-family: "area-variable";
+            src: url(./fonts/fonnts.com-Area_Inktrap_Extended_Bold.otf) format("opentype");
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Font weight 900 (Black/Extra Bold) */
+        @font-face {
+            font-family: "area-variable";
+            src: url(./fonts/fonnts.com-Area_Inktrap_Extended_Black.otf) format("opentype");
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "area-variable";
+            src: url(./fonts/fonnts.com-Area_Inktrap_Extended_Regular.otf) format("opentype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* CSS Custom Properties */
+        :root {
+            --font-hero: "area-variable", system-ui, sans-serif;
+            --font-body: system-ui, -apple-system, sans-serif;
+            --font-subheading: "area-variable", system-ui, sans-serif;
+            --font-base: "area-variable", system-ui, sans-serif;
+        }
+
+        /* Utility Classes */
+        .font-hero {
+            font-family: var(--font-hero);
+        }
+
+        .font-subheading {
+            font-family: var(--font-subheading);
+        }
+
+        .font-base {
+            font-family: var(--font-base);
+        }
+
+        .font-body {
+            font-family: var(--font-body);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+</head>
+
+<body class="box-border bg-[#12100E] h-screen w-full">
+    <main>
+        <header
+            class="h-screen py-10 px-15 bg-[url(./assets/cylinder.png)] bg-no-repeat bg-size-[80vh] bg-position-[left_120%_top_50%] grid grid-cols-[auto_auto_auto_1fr_1fr] grid-rows-[auto_1fr_auto]">
+            <nav class="col-span-12 flex justify-between items-center mb-8 lg:mb-16">
+                <div class="flex space-x-8 text-sm font-medium">
+                    <span class="text-white">STICKY SECTIONS</span>
+                    <span class="text-zinc-400 hover:text-white transition-colors">ARTICLE</span>
+                    <span class="text-zinc-400 hover:text-white transition-colors">ALL DEMOS</span>
+                    <span class="text-zinc-400 hover:text-white transition-colors">SUBSCRIBE TO OUR FRONTEND NEWS</span>
+                </div>
+                <div class="text-xs text-zinc-400 text-right leading-tight">
+                    DIV/I.AI: ON DEMAND CONTENT CREATION,<br>
+                    CODE WRITING & IMAGE GENERATION.
+                </div>
+            </nav>
+
+            <div class="col-span-12 lg:col-span-8 flex flex-col justify-center items-end w-fit relative text-white">
+                <h1 class="text-8xl font-regular">
+                    THE<span class="text-white font-hero tracking-[-0.10em]">NARRATIVE</span>
+                </h1>
+                <p class="font-xs tracking-tighter">
+                    AN EXPLORATION OF THE SYNTHETIC ERA.
+                </p>
+            </div>
+
+            <div
+                class="col-span-12 text-white flex items-center space-x-4 mt-8 lg:mt-0 border w-fit px-4 py-5 rounded-lg border-white">
+                <span class="text-sm font-medium">VARIATIONS:</span>
+                <div class="flex space-x-2 text-white">
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">1</button>
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">2</button>
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">3</button>
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">4</button>
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">5</button>
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">6</button>
+                    <button class="w-8 h-8 rounded-full bg-white text-black text-sm font-medium">7</button>
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">8</button>
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">9</button>
+                    <button
+                        class="w-8 h-8 rounded-full border text-sm hover:text-white text-zinc-600 transition-colors">10</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="h-[90vh] w-full flex justify-center items-center text-white ">
+            <h1 class="text-5xl w-[70%] font-base leading-15 tracking-tighter">As data conglomerates reveled in the
+                opulence of cognitive wealth, a silent underclass manifested, condemned to the digital periphery.</h1>
+        </section>
+
+        <section class="flex flex-col gap-10 text-center text-white">
+            <div id="card1"
+                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#2e251e] mx-auto">
+                <img src="./assets/pentagon.png" alt="Pentagon" class="w-[165px]">
+                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
+                        class="text-5xl font-hero font-[900]">ALGORITHM</span></h1>
+                <p class="text-lg">The algorithm's working are shrouded in complexity.</p>
+            </div>
+
+            <div id="card2"
+                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#43392F] mx-auto">
+                <img src="./assets/cylinder.png" alt="Pentagon" class="w-[165px]">
+                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
+                        class="text-5xl font-hero font-[900]">DOGMA</span></h1>
+                <p class="text-lg">Enshrining the principles of conformity and reinforcing the status quo.</p>
+            </div>
+
+            <div id="card3"
+                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#2e251e] mx-auto">
+                <img src="./assets/radius.png" alt="Pentagon" class="w-[180px] aspect-square">
+                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
+                        class="text-5xl font-hero font-[900]">ARCHITECTS
+                    </span></h1>
+                <p class="text-lg">The elusive entities, lacking human form, operate in the shadows.</p>
+            </div>
+
+            <div id="card4"
+                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#43392F] mx-auto">
+                <img src="./assets/halfcircle.png" alt="Pentagon" class="w-[250px]">
+                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
+                        class="text-5xl font-hero font-[900]">WASTELAND</span></h1>
+                <p class="text-lg">This overlooked realm, a consequence of algorithmic judgments.</p>
+            </div>
+
+            <div id="card5"
+                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#2e251e] mx-auto">
+                <img src="./assets/hexagon.png" alt="Pentagon" class="w-[165px] ">
+                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
+                        class="text-5xl font-hero font-[900]">NARRATIVE</span></h1>
+                <p class="text-lg">The collective story sculpted by the architects.</p>
+            </div>
+
+            <div id="card6"
+                class="card sticky top-15 flex  flex-col w-[32vw]  px-17 py-25 rounded-xl gap-5 items-center bg-[#43392F] mx-auto">
+                <img src="./assets/plane.png" alt="Pentagon" class="w-[255px] ">
+                <h1 class="text-4xl font-subheading tracking-[-0.10em]">THE <br><span
+                        class="text-5xl font-hero font-[900]">OPULENCE</span></h1>
+                <p class="text-lg">The cognitive elite's wealth in the algorithmic society.</p>
+            </div>
+
+        </section>
+
+        <section class="h-[90vh] w-full flex justify-center items-center text-white ">
+            <h1 class="text-5xl w-[70%] font-base leading-15 tracking-tighter">
+                Lost in perpetual dependency, inhabitants of the Synthetic Era found solace in cryptic simulations,
+                where pain ebbed and cognitive loads momentarily lightened.
+            </h1>
+        </section>
+
+
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
