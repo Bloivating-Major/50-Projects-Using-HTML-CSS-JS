@@ -8,6 +8,7 @@ const cartItemTemplate = document.querySelector('#cart-item-template');
 const cartItemContainer = document.querySelector('[data-cart-items]');
 const cartQuantity = document.querySelector("[data-cart-quantity]");
 const cartTotal = document.querySelector('[data-cart-total]');
+const cart = document.querySelector('[data-cart]');
 const IMAGE_URL = "https://dummyimage.com/210x130";
 
 
@@ -28,6 +29,24 @@ export function addToCart(id){
 }
 
 function renderCart(){
+    if(shoppingCart.length === 0){
+        hideCart();
+    }else{
+        showCart();
+        renderCartItems();
+    }
+}
+
+function hideCart(){
+    cart.classList.add('invisible');
+    cartItemsWrapper.classList.add('invisible');
+}
+
+function showCart(){
+    cart.classList.remove('invisible');
+}
+
+function renderCartItems(){
     cartQuantity.innerText = shoppingCart.length;
 
     const total = shoppingCart.reduce((sum, entry)=>{

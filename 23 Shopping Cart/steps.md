@@ -95,3 +95,13 @@
     - remove the placeholders 
     - So now that we have setup the template what we can do is more forward with rendering process
     - now we will create our template clone and then select all those elements in our template item and then use it
+
+
+- so what we will do now is create a feature to show and hide the cart when necessary that time only.
+
+- so we will rename our funtion renderCart to renderCartItems and then create an another function renderCart which will call renderCart items also we want to call this function immediately when you setupShoppingCart 
+
+- so what we will do in renderCart function that if our length of shoppingCart is 0 then we will hide cart else we will show cart
+- and now inorder to hide our cart what we can do is target the cart section itself which shows all the cart related things and then target that and select it in js using data-cart attribute 
+
+- now what we can do is target the section and add class invisible to it so that it doesn't pop up at first and then when user adds item then only show it.
