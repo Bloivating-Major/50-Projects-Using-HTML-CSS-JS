@@ -91,7 +91,7 @@ function renderCartItems() {
     const container = cartItem.querySelector("[data-item]");
     container.dataset.itemId = item.id;
 
-    const name = cartItem.querySelector("[data-name");
+    const name = cartItem.querySelector("[data-name]");
     name.innerText = item.name;
 
     const img = cartItem.querySelector("[data-image]");
