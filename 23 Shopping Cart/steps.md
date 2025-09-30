@@ -119,3 +119,12 @@
     - so what we can do to create that util function is
 
     export default function addGlobalEventListener(type, selector, callback)
+
+    - use a function saveCart() and loadCart() this will help you to save it in a session storage
+
+- first thing we need is a key SESSION_STORAGE_KEY='SHOPPING_CART-cart';
+- in save cart function we will save it using sessionStorage.setItem(key, take card and stringify it );
+- so now what you can do is when you addtocart save it
+- when remove from cart save it
+
+- finally load that data using getItem
