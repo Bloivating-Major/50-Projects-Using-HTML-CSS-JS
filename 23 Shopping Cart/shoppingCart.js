@@ -1,4 +1,5 @@
 import items from './items.json';
+import { addGlobalEventListener } from './utils/addGlobalEventListener';
 import formatCurrency from './utils/formatCurrency';
 
 const cartButton = document.querySelector('[data-cart-button]');
@@ -13,10 +14,17 @@ const IMAGE_URL = "https://dummyimage.com/210x130";
 
 
 export function setupShoppingCart(){
-    cartButton.addEventListener('click', ()=>{
-        cartItemsWrapper.classList.toggle('invisible');
+    addGlobalEventListener("click", "[data-remove-from-cart-button]", (e)=>{
+         const id = e.target.closest('[data-item]').dataset.itemId;
+         removeItems(parseInt(id));
     })
+
+    renderCart();
 }
+
+cartButton.addEventListener('click', ()=>{
+    cartItemsWrapper.classList.toggle('invisible');
+})
 
 export function addToCart(id){
     const existing = shoppingCart.find((e) => e.id === id);
@@ -25,6 +33,13 @@ export function addToCart(id){
     }else{
         shoppingCart.push({id : id, quantity : 1});
     }
+    renderCart();
+}
+
+function removeItems(id){
+    const existing = shoppingCart.find((e) => e.id === id);
+    if(existing == null) return;
+    shoppingCart = shoppingCart.filter(entry => entry.id !== id);
     renderCart();
 }
 

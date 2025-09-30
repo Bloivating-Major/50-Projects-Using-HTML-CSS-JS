@@ -105,3 +105,17 @@
 - and now inorder to hide our cart what we can do is target the cart section itself which shows all the cart related things and then target that and select it in js using data-cart attribute 
 
 - now what we can do is target the section and add class invisible to it so that it doesn't pop up at first and then when user adds item then only show it.
+
+- Remove Items from cart
+    - we will pass it an id.
+    - first we will find existing item
+    - if it's equal to null then we will return
+    - then what we will do is filter those elements which we don't have to remove this way elements that we have to remove will be automatically removed.
+    - shoppingCart = shoppingCart.filter(entry => entry.id !== id);
+    renderCart();
+    - then what we will do is check out our store and find out the template in which we have used that cart button! which removes the item from cart.
+    - so again we will have to create a global event listener for the cart buttons to remove item instead of that what we can do is create a utility function out of it
+
+    - so what we can do to create that util function is
+
+    export default function addGlobalEventListener(type, selector, callback)
