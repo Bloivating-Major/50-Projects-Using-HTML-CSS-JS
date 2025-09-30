@@ -1,80 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <title>Store</title>
-  <script src="./script.js" defer type="module"></script>
-</head>
-<body>
-  <header class="text-gray-700 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-center">
-      <nav class="flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900" href="/index.html">Home</a>
-        <a class="mr-5 border-b-2 border-blue-500 hover:text-gray-900" href="/store.html">Store</a>
-        <a class="mr-5 hover:text-gray-900" href="/team.html">Team</a>
-      </nav>
-    </div>
-  </header>
-  <section class="text-gray-700 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div data-store-container class="flex flex-wrap -m-4">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#3B82F6',
+              secondary: '#1F2937'
+            }
+          }
+        }
+      }
+    </script>
+    <title>Store</title>
+    <script src="./script.js" defer type="module"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Modern Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-30">
+      <div class="container mx-auto flex flex-wrap px-24 py-6 flex-col md:flex-row items-center justify-between">
+        <a class="flex title-font font-bold items-center text-gray-900 mb-4 md:mb-0">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">S</span>
+          </div>
+          <span class="ml-3 text-xl">Store</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center space-x-8">
+          <a class="text-gray-600 hover:text-gray-900 transition-colors" href="index.html">Home</a>
+          <a class="text-blue-600 font-semibold border-b-2 border-blue-500 pb-1 hover:text-blue-700 transition-colors" href="store.html">Store</a>
+          <a class="text-gray-600 hover:text-gray-900 transition-colors" href="team.html">Team</a>
+        </nav>
       </div>
-    </div>
-  </section>
-  <section data-cart class="invisible">
-    <div data-cart-items-wrapper class="invisible mb-4 top-0 right-0 mr-4 mt-20 fixed">
-      <div style="max-height: calc(100vh - 6rem);" class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col">
-        <div data-cart-items class="overflow-y-auto px-4 pt-4">
-        </div>
-        <div class="flex justify-between items-end border-t p-4">
-          <span class="font-bold text-lg uppercase">Total</span>
-          <span data-cart-total class="font-bold">₹0.00</span>
+    </header>
+
+    <!-- Store Header -->
+    <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+      <div class="container px-6 mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Our <span class="text-blue-600">Store</span>
+        </h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          Discover amazing products with vibrant colors and premium quality. Each item is carefully selected for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-20 bg-white">
+      <div class="container px-6 mx-auto">
+        <div data-store-container class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <!-- Products will be dynamically added here -->
         </div>
       </div>
-    </div>
-    <button data-cart-button class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-      <div data-cart-quantity class="bg-red-500 rounded-full text-xs absolute w-6 h-6 flex justify-center items-center right-0 bottom-0 transform translate-x-2 translate-y-2"></div>
-    </button>
-  </section>
+    </section>
 
-  <template id="store-item-template">
-    <div data-store-item class="lg:w-1/4 md:w-1/2 p-4 w-full">
-          <div class="block relative h-48 rounded overflow-hidden">
-            <img data-image alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260/333/333">
-          </div>
-          <div class="mt-4 flex items-end justify-between">
-            <div>
-              <h3 data-category class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"></h3>
-              <h2 data-name class="text-gray-900 title-font text-lg font-medium"></h2>
-              <p data-price class="mt-1"></p>
-            </div>
-            <button data-add-to-cart-button class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700">Add To Cart</button>
+    <!-- Shopping Cart Section -->
+    <section data-cart>
+      <!-- Cart Button -->
+      <button data-cart-button class="fixed top-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-white hover:from-blue-600 hover:to-blue-700 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 17a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      </button>
+
+      <!-- Cart Quantity Badge -->
+      <span data-cart-quantity class="fixed top-4 right-4 z-50 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shadow-lg">0</span>
+
+      <!-- Cart Items Panel -->
+      <div data-cart-items-wrapper class="invisible fixed top-20 right-6 z-40 w-96 bg-white border border-gray-200 rounded-2xl shadow-2xl backdrop-blur-sm">
+        <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-t-2xl">
+          <h3 class="font-bold text-xl text-gray-900">Shopping Cart</h3>
+        </div>
+        <div data-cart-items class="p-6 max-h-96 overflow-y-auto space-y-4">
+          <!-- Cart items will appear here -->
+        </div>
+        <div class="p-6 border-t border-gray-200 flex justify-between items-center bg-gray-50 rounded-b-2xl">
+          <span class="font-bold text-lg text-gray-900">Total:</span>
+          <span data-cart-total class="font-bold text-xl text-blue-600">₹0.00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Item Template -->
+    <template id="store-item-template">
+      <div data-store-item data-item-id="" class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+        <div class="relative overflow-hidden">
+          <img data-image alt="product" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://dummyimage.com/420x260/333/333" />
+          <div class="absolute top-4 left-4">
+            <span data-category class="bg-white/90 backdrop-blur-sm text-gray-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide"></span>
           </div>
         </div>
-  </template>
-
-  <template id="cart-item-template">
-     <div data-item class="mb-6">
-            <div class="block relative h-24 rounded overflow-hidden">
-              <img data-image alt="ecommerce" class="object-cover object-center w-full h-full block rounded" >
-              <button data-remove-from-cart-button class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center">&times;</button>
+        <div class="p-6">
+          <h3 data-name class="text-xl font-bold text-gray-900 mb-2 line-clamp-2"></h3>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+              <span data-price class="text-2xl font-bold text-blue-600"></span>
             </div>
-            <div class="mt-2 flex justify-between">
-              <div class="flex items-center title-font">
-                <h2 data-name class="text-gray-900 text-lg font-medium">
-                  
-                </h2>
-                <span data-quantity class="text-gray-600 text-sm font-bold ml-1"></span>
-              </div>
-              <div data-price></div>
+            <button data-add-to-cart-button class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- Cart Item Template -->
+    <template id="cart-item-template">
+      <div data-item class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-center space-x-4">
+          <div class="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+            <img data-image alt="product" class="w-full h-full object-cover" />
+            <button data-remove-from-cart-button class="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 text-sm flex items-center justify-center transition-colors shadow-lg">×</button>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h4 data-name class="font-semibold text-gray-900 truncate"></h4>
+            <div class="flex items-center justify-between mt-1">
+              <span data-quantity class="text-blue-600 font-medium text-sm"></span>
+              <div data-price class="font-bold text-gray-900"></div>
             </div>
           </div>
-  </template>
-</body>
+        </div>
+      </div>
+    </template>
+  </body>
 </html>

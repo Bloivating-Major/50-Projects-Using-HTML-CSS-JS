@@ -1,85 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <title>About</title>
-  <script src="./script.js" defer type="module"></script>
-</head>
-<body>
-  <header class="text-gray-700 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-center">
-      <nav class="flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900" href="index.html">Home</a>
-        <a class="mr-5 hover:text-gray-900" href="store.html">Store</a>
-        <a class="mr-5 border-b-2 border-blue-500 hover:text-gray-900" href="team.html">Team</a>
-      </nav>
-    </div>
-  </header>
-  <section class="text-gray-700 body-font">
-    <div class="container px-5 py-24 pt-12 mx-auto">
-      <div class="flex flex-col text-center w-full mb-20">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, et dignissimos? At assumenda ea, beatae delectus ipsum repellendus autem sunt!.</p>
-      </div>
-      <div class="flex flex-wrap -m-2">
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://avatars.githubusercontent.com/u/102620496?v=4">
-            <div class="flex-grow">
-              <h2 class="text-gray-900 title-font font-medium">Sambhav Wakhariya</h2>
-              <p class="text-gray-500">Founder</p>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#3B82F6',
+              secondary: '#1F2937'
+            }
+          }
+        }
+      }
+    </script>
+    <title>Team</title>
+    <script src="./script.js" defer type="module"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Modern Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+      <div class="container mx-auto flex flex-wrap px-24 py-6 flex-col md:flex-row items-center justify-between">
+        <a href="/" class="flex title-font font-bold items-center text-gray-900 mb-4 md:mb-0">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">S</span>
           </div>
-        </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://avatars.githubusercontent.com/u/75113218?v=4">
-            <div class="flex-grow">
-              <h2 class="text-gray-900 title-font font-medium">Kunal Lokhande</h2>
-              <p class="text-gray-500">Product Manager</p>
-            </div>
-          </div>
-        </div>
+          <span class="ml-3 text-xl">Store</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center space-x-8">
+          <a class="text-gray-600 hover:text-gray-900 transition-colors" href="index.html">Home</a>
+          <a class="text-gray-600 hover:text-gray-900 transition-colors" href="store.html">Store</a>
+          <a class="text-blue-600 font-semibold border-b-2 border-blue-500 pb-1 hover:text-blue-700 transition-colors" href="team.html">Team</a>
+        </nav>
       </div>
-    </div>
-  </section>
-     <section data-cart class="invisible">
-    <div data-cart-items-wrapper class="invisible mb-4 top-0 right-0 mr-4 mt-20 fixed">
-      <div style="max-height: calc(100vh - 6rem);" class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col">
-        <div data-cart-items class="overflow-y-auto px-4 pt-4">
-        </div>
-        <div class="flex justify-between items-end border-t p-4">
-          <span class="font-bold text-lg uppercase">Total</span>
-          <span data-cart-total class="font-bold">₹0.00</span>
-        </div>
+    </header>
+
+    <!-- Team Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+      <div class="container px-6 mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Meet Our <span class="text-blue-600">Team</span>
+        </h1>
+        <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+          Behind every great product is a passionate team. Meet the creative minds who bring innovation, dedication, and expertise to everything we do.
+        </p>
       </div>
-    </div>
-    <button data-cart-button class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-      <div data-cart-quantity class="bg-red-500 rounded-full text-xs absolute w-6 h-6 flex justify-center items-center right-0 bottom-0 transform translate-x-2 translate-y-2"></div>
-    </button>
-  </section>
-  <template id="cart-item-template">
-     <div data-item class="mb-6">
-            <div class="block relative h-24 rounded overflow-hidden">
-              <img data-image alt="ecommerce" class="object-cover object-center w-full h-full block rounded" >
-              <button data-remove-from-cart-button class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center">&times;</button>
-            </div>
-            <div class="mt-2 flex justify-between">
-              <div class="flex items-center title-font">
-                <h2 data-name class="text-gray-900 text-lg font-medium">
-                  
-                </h2>
-                <span data-quantity class="text-gray-600 text-sm font-bold ml-1"></span>
+    </section>
+
+    <!-- Team Members -->
+    <section class="py-20 bg-white">
+      <div class="container px-6 mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Team Member 1 -->
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+            <div class="p-8 text-center">
+              <div class="relative inline-block mb-6">
+                <img alt="Sambhav Wakhariya" class="w-24 h-24 rounded-full object-cover mx-auto shadow-lg ring-4 ring-blue-100 group-hover:ring-blue-200 transition-all duration-300" src="https://avatars.githubusercontent.com/u/102620496?v=4" />
+                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
               </div>
-              <div data-price></div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Sambhav Wakhariya</h3>
+              <p class="text-blue-600 font-semibold mb-3">Founder & CEO</p>
+              <p class="text-gray-600 text-sm leading-relaxed">Visionary leader driving innovation and growth with passion for creating exceptional user experiences.</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://x.com/Coding_Sage" class="w-10 h-10 bg-gray-100 hover:bg-blue-100 rounded-full flex items-center justify-center transition-colors">
+                  <svg class="w-5 h-5 text-gray-600 hover:text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 4.77a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-  </template>
-</body>
+
+          <!-- Team Member 2 -->
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+            <div class="p-8 text-center">
+              <div class="relative inline-block mb-6">
+                <img alt="Kunal Lokhande" class="w-24 h-24 rounded-full object-cover mx-auto shadow-lg ring-4 ring-blue-100 group-hover:ring-blue-200 transition-all duration-300" src="https://avatars.githubusercontent.com/u/75113218?v=4" />
+                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Kunal Lokhande</h3>
+              <p class="text-green-600 font-semibold mb-3">Product Manager</p>
+              <p class="text-gray-600 text-sm leading-relaxed">Strategic thinker focused on delivering products that delight customers and drive business success.</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://x.com/kunal_linux" class="w-10 h-10 bg-gray-100 hover:bg-green-100 rounded-full flex items-center justify-center transition-colors">
+                  <svg class="w-5 h-5 text-gray-600 hover:text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 4.77a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Join Us Card -->
+          <div class="group bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+            <div class="p-8 text-center h-full flex flex-col justify-center">
+              <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Join Our Team</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">We're always looking for talented individuals to join our growing team.</p>
+              <a href="#" class="inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg">
+                View Openings
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping Cart Section -->
+    <section data-cart>
+      <!-- Cart Button -->
+      <button data-cart-button class="fixed top-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-white hover:from-blue-600 hover:to-blue-700 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 17a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      </button>
+
+      <!-- Cart Quantity Badge -->
+      <span data-cart-quantity class="fixed top-4 right-4 z-50 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shadow-lg">0</span>
+
+      <!-- Cart Items Panel -->
+      <div data-cart-items-wrapper class="invisible fixed top-20 right-6 z-40 w-96 bg-white border border-gray-200 rounded-2xl shadow-2xl backdrop-blur-sm">
+        <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-t-2xl">
+          <h3 class="font-bold text-xl text-gray-900">Shopping Cart</h3>
+        </div>
+        <div data-cart-items class="p-6 max-h-96 overflow-y-auto space-y-4">
+          <!-- Cart items will appear here -->
+        </div>
+        <div class="p-6 border-t border-gray-200 flex justify-between items-center bg-gray-50 rounded-b-2xl">
+          <span class="font-bold text-lg text-gray-900">Total:</span>
+          <span data-cart-total class="font-bold text-xl text-blue-600">₹0.00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Item Template -->
+    <template id="cart-item-template">
+      <div data-item class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-center space-x-4">
+          <div class="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+            <img data-image alt="product" class="w-full h-full object-cover" />
+            <button data-remove-from-cart-button class="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 text-sm flex items-center justify-center transition-colors shadow-lg">×</button>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h4 data-name class="font-semibold text-gray-900 truncate"></h4>
+            <div class="flex items-center justify-between mt-1">
+              <span data-quantity class="text-blue-600 font-medium text-sm"></span>
+              <div data-price class="font-bold text-gray-900"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
 </html>
